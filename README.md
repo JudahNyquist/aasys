@@ -14,24 +14,13 @@ python3 -m tools.plot_run run.npz --out run.png        # needs requirements-dev
 ```
 
 here's all the scenarios
-┌──────────────────┬───────────────────────────────────────────────────────────────────────────────────────┐
-│    --scenario    │                                     What it runs                                      │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ single (default) │ One drone flying straight at the asset — the baseline.                                │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ maneuvering      │ A weaving drone; the case a single CV model fails on and the IMM should catch.        │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ hovering         │ A hoverer in the radar's zero-Doppler notch (optical-only) plus an inbound crosser.   │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ swarm            │ 5-drone saturation raid from all sides; stresses association, dwell budget, magazine. │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ standoff         │ 3 fixed-wing threats at ~3 km, engaged by missile rather than gun.                    │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ orbiter          │ Drone loitering in a sustained turn; engage=False (track only).                       │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ diving           │ Cruise then terminal dive; uses its own lower grid + shorter-mast rig.                │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ counterdrone     │ 3 jinking quads inside 1 km, stopped by counter-drone chasers.                        │
-├──────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
-│ cv-baseline      │ Same as maneuvering but with a single CV EKF, for IMM comparison.                     │
-└──────────────────┴───────────────────────────────────────────────────────────────────────────────────────┘
+
+single (default): One drone flying straight at the asset — the baseline.
+maneuvering: A weaving drone; the case a single CV model fails on and the IMM should catch.
+hovering: A hoverer in the radar's zero-Doppler notch (optical-only) plus an inbound crosser
+swarm: 5-drone saturation raid from all sides; stresses association, dwell budget, magazine.
+standoff: 3 fixed-wing threats at ~3 km, engaged by missile rather than gun.
+orbiter: Drone loitering in a sustained turn; engage=False (track only).
+diving: Cruise then terminal dive; uses its own lower grid + shorter-mast rig.
+counterdrone: 3 jinking quads inside 1 km, stopped by counter-drone chasers.
+cv-baseline: Same as maneuvering but with a single CV EKF, for IMM comparison.
