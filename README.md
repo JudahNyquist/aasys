@@ -14,7 +14,7 @@ python3 -m tools.plot_run run.npz --out run.png        # needs requirements-dev
 ```
 
 here's all the scenarios
-```bash
+```
 single (default): One drone flying straight at the asset — the baseline.
 maneuvering: A weaving drone; the case a single CV model fails on and the IMM should catch.
 hovering: A hoverer in the radar's zero-Doppler notch (optical-only) plus an inbound crosser
