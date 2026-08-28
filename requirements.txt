@@ -1,0 +1,12 @@
+# Runtime dependencies.
+#
+# Lower bounds rather than exact pins, because the floor is set by the
+# interpreter: numpy 2.5 and scipy 1.18 are Python 3.12+ only, so pinning to
+# them makes this file uninstallable on 3.11 -- which the simulation itself
+# supports fine. A range resolves to the newest wheel each interpreter can
+# actually take.
+#
+# Verified against numpy 2.4.4 / scipy 1.17.1 on CPython 3.11.
+numpy>=2.4,<3
+scipy>=1.16,<2
+pyglet>=2.1,<3

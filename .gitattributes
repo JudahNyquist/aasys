@@ -1,0 +1,5 @@
+# Normalise text in the repo; keep the POSIX launcher LF so it still runs
+# on macOS and Linux after a Windows checkout.
+* text=auto
+*.sh text eol=lf
+*.py text

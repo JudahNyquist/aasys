@@ -1,0 +1,2 @@
+# Optional tooling, not needed to run the simulation.
+matplotlib>=3.8

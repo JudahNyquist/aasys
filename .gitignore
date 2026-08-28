@@ -1,0 +1,30 @@
+# Virtual environment. 182 MB of wheels, and the checked-in one carries a
+# broken interpreter symlink; recreate it from requirements.txt instead.
+.venv/
+venv/
+env/
+
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*.so
+
+# macOS AppleDouble resource forks. These shadow every real file, contain
+# null bytes, and break `compileall` when they land next to a .py.
+._*
+.DS_Store
+
+# Dated local snapshot of the tree -- what version control is for.
+backup-*/
+
+# Recorded runs and analysis output (see run.py --record).
+*.npz
+*.tracks.csv
+*.truth.csv
+*.png
+
+# Editor / tooling
+.idea/
+.vscode/
+*.swp
+.pytest_cache/
